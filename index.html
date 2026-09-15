@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOVELLA EPIL — студия электроэпиляции в Москве</title>
+<meta name="description" content="Премиальная студия электроэпиляции NOVELLA EPIL. 4 мастера, 3 года опыта. Гладкая кожа навсегда: прайс, абонементы, работы до/после.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="NOVELLA EPIL — студия электроэпиляции">
+<meta property="og:description" content="Чисто, безопасно, навсегда. Прайс и абонементы внутри.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c0c0c0'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='16' fill='%23fff'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --silver:linear-gradient(135deg,#f5f5f7 0%,#c0c0c0 100%);
+  --silver-border:#d9d9d9;
+  --text:#111;
+  --muted:#8a8a8a;
+  --bg:#fff;
+  --nav-h:72px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px)}
+body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2{font-family:'Cormorant Garamond',serif;font-weight:500}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid #999;outline-offset:3px;border-radius:6px}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:sticky;top:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  min-height:var(--nav-h);padding:14px 40px;
+  background:rgba(255,255,255,.82);
+  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+  border-bottom:1px solid #eee;
+}
+.logo{letter-spacing:.4em;font-size:12px;text-decoration:none;white-space:nowrap}
+.menu{display:flex;gap:28px;font-size:13px;color:#555}
+.menu a{text-decoration:none;transition:color .2s}
+.menu a:hover{color:#111}
+.menu-cta{display:none}
+.btn-silver{
+  background:linear-gradient(180deg,#efefef,#c8c8c8);
+  border:1px solid #ccc;padding:11px 22px;border-radius:999px;
+  text-decoration:none;color:#111;font-size:13px;font-weight:600;
+  box-shadow:0 4px 18px rgba(0,0,0,.08);transition:transform .25s,box-shadow .25s;
+  white-space:nowrap;
+}
+.btn-silver:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.btn-ghost{padding:11px 22px;border-radius:999px;border:1px solid #ddd;text-decoration:none;color:#111;font-size:13px;transition:border-color .25s,background .25s}
+.btn-ghost:hover{border-color:#bbb;background:#fafafa}
+.burger{
+  display:none;width:44px;height:44px;border:1px solid #e5e5e5;border-radius:12px;
+  background:#fff;cursor:pointer;align-items:center;justify-content:center;
+}
+.burger svg{width:18px;height:18px;stroke:#111;stroke-width:1.6;fill:none;stroke-linecap:round}
+
+/* ---------- HERO ---------- */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;min-height:calc(86vh - var(--nav-h));padding:40px}
+.hero-left{padding:60px 20px 20px}
+.badge{display:inline-block;border:1px solid var(--silver-border);padding:6px 14px;border-radius:999px;font-size:10px;letter-spacing:.15em;margin-bottom:24px}
+.hero h1{font-size:clamp(46px,7.5vw,84px);line-height:.88;letter-spacing:-.02em}
+.hero h1 i{color:#a0a0a0;font-style:italic}
+.hero p{margin:22px 0 30px;color:var(--muted);max-width:420px;line-height:1.6}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-img{
+  position:relative;min-height:520px;border-radius:32px;overflow:hidden;
+  border:1px solid #eee;
+  background:radial-gradient(circle at 60% 40%,#f2f2f2,#e9e9e9);
+}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* ---------- SECTIONS ---------- */
+.section{padding:80px 40px}
+.section-head{max-width:700px;margin:0 auto 50px;text-align:center}
+.section-head h2{font-size:clamp(34px,5vw,48px)}
+.section-head p{color:var(--muted);margin-top:12px;line-height:1.6}
+
+.masters{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{border:1px solid #e9e9e9;border-radius:24px;padding:28px;background:#fff;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.04);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(0,0,0,.08)}
+.card img{width:64px;height:64px;border-radius:50%;object-fit:cover;margin:0 auto 14px;border:2px solid #eee}
+.card h3{font-weight:600;font-size:16px}
+.card .role{color:#888;font-size:12px;margin-top:2px}
+.card .price{font-family:'Cormorant Garamond',serif;font-size:28px;margin-top:8px}
+.card .dur{font-size:12px;color:#888}
+
+.subs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#eee;border:1px solid #eee;border-radius:24px;overflow:hidden}
+.sub{background:#fff;padding:28px}
+.sub h4{font-size:16px;font-weight:600}
+.sub ul{margin-top:14px;list-style:none;color:var(--muted);font-size:13px;line-height:1.9}
+.sub li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed #f0f0f0;padding-bottom:6px;margin-bottom:6px}
+.sub li:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.sub li b{color:#111;font-weight:600}
+
+.before-after{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ba{border-radius:20px;overflow:hidden;border:1px solid #eee;position:relative;background:#f5f5f7}
+.ba img{width:100%;height:340px;object-fit:cover}
+.ba-label{position:absolute;top:14px;left:14px;z-index:2;background:rgba(255,255,255,.92);padding:5px 10px;border-radius:999px;font-size:10px;letter-spacing:.1em;border:1px solid #eee}
+
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.member img{width:100%;height:320px;object-fit:cover;border-radius:20px;border:1px solid #eee}
+.member figcaption{margin-top:10px;text-align:center;font-size:13px}
+.member figcaption span{color:#888;font-size:12px}
+
+/* ---------- FOOTER ---------- */
+.footer{
+  margin:20px 40px 40px;background:#0f0f0f;color:#fff;border-radius:28px;padding:40px;
+  display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:flex-start;
+}
+.footer .brand{letter-spacing:.3em;font-size:13px}
+.footer .sub-line{opacity:.5;font-size:12px;margin-top:8px}
+.footer .contacts{display:flex;flex-direction:column;gap:10px;font-size:13px}
+.footer .contacts a{color:#fff;text-decoration:none;opacity:.75;transition:opacity .2s}
+.footer .contacts a:hover{opacity:1}
+.footer .note{opacity:.55;font-size:13px;max-width:320px;line-height:1.6}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:900px){
+  .nav{padding:12px 18px}
+  .nav .btn-silver{display:none}
+  .burger{display:flex}
+  .menu{
+    position:fixed;top:var(--nav-h);left:0;right:0;
+    flex-direction:column;gap:4px;padding:16px 18px 22px;
+    background:#fff;border-bottom:1px solid #eee;
+    transform:translateY(-130%);transition:transform .35s cubic-bezier(.4,0,.2,1);
+    box-shadow:0 20px 40px rgba(0,0,0,.06);
+  }
+  .menu.open{transform:translateY(0)}
+  .menu a{padding:12px 4px;font-size:15px;border-bottom:1px solid #f4f4f4}
+  .menu-cta{display:block;text-align:center;margin-top:14px;border-bottom:0}
+  .hero,.masters,.subs,.before-after,.team{grid-template-columns:1fr}
+  .hero{padding:20px;gap:20px}
+  .hero-left{padding:20px 0}
+  .hero-img{min-height:340px;border-radius:24px}
+  .section{padding:56px 20px}
+  .ba img{height:260px}
+  .member img{height:360px}
+  .footer{margin:20px;padding:28px;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="top">
+  <a class="logo" href="#top">NOVELLA EPIL</a>
+
+  <div class="menu" id="menu">
+    <a href="#about">О нас</a>
+    <a href="#price">Прайс</a>
+    <a href="#subs">Абонементы</a>
+    <a href="#works">До / После</a>
+    <a href="#book" class="btn-silver menu-cta">Записаться</a>
+  </div>
+
+  <a href="#book" class="btn-silver nav-cta">Записаться</a>
+
+  <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu">
+    <svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+  </button>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="badge">БЕЛЫЙ С СЕРЕБРОМ • ВАШ ФИРМЕННЫЙ СТИЛЬ</div>
+    <h1>NOVELLA<br><i>EPIL</i></h1>
+    <p>Премиальная студия электроэпиляции. Работаем в технике, где важна каждая волосинка. Чисто, безопасно, навсегда.</p>
+    <div class="actions">
+      <a href="#price" class="btn-silver">Смотреть прайс →</a>
+      <a href="#works" class="btn-ghost">Наши работы</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <!-- ЗАМЕНИ: img/face-bordo.jpg -->
+    <img src="img/face-bordo.jpg" alt="Основатель студии Novella Epil" fetchpriority="high" decoding="async">
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="section-head">
+    <h2>О нас</h2>
+    <p>Нас 4 мастера, 3 года опыта, одна цель — гладкая кожа без компромиссов. Вот наша команда.</p>
+  </div>
+  <div class="team">
+    <figure class="member">
+      <img src="img/team-group.jpg" alt="Команда Novella Epil" loading="lazy" decoding="async">
+      <figcaption>Вся команда Novella Epil</figcaption>
+    </figure>
+    <figure class="member">
+      <img src="img/master-1.jpg" alt="Дана — топ-мастер" loading="lazy" decoding="async">
+      <figcaption><b>Дана</b><br><span>1800 ₽ / 35 мин</span></figcaption>
+    </figure>
+    <figure class="member">
+      <img src="img/master-2.jpg" alt="Альбина — мастер" loading="lazy" decoding="async">
+      <figcaption><b>Альбина</b><br><span>1600 ₽ / 30 мин</span></figcaption>
+    </figure>
+    <figure class="member">
+      <img src="img/master-3.jpg" alt="Мадина — мастер" loading="lazy" decoding="async">
+      <figcaption><b>Мадина</b><br><span>1500 ₽ / 29 мин</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="price" style="background:#fafafa">
+  <div class="section-head"><h2>Прайс</h2></div>
+  <div class="masters">
+    <div class="card">
+      <img src="img/master-1.jpg" alt="Дана" loading="lazy" decoding="async">
+      <h3>Дана</h3>
+      <p class="role">Топ-мастер</p>
+      <div class="price">1 800 ₽</div>
+      <p class="dur">за 35 минут</p>
+    </div>
+    <div class="card">
+      <img src="img/master-2.jpg" alt="Альбина" loading="lazy" decoding="async">
+      <h3>Альбина</h3>
+      <p class="role">Мастер</p>
+      <div class="price">1 600 ₽</div>
+      <p class="dur">за 30 минут</p>
+    </div>
+    <div class="card">
+      <img src="img/master-3.jpg" alt="Мадина" loading="lazy" decoding="async">
+      <h3>Мадина</h3>
+      <p class="role">Мастер</p>
+      <div class="price">1 500 ₽</div>
+      <p class="dur">за 29 минут</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="subs">
+  <div class="section-head">
+    <h2>Абонементы</h2>
+    <p>Выгоднее разовых посещений. Те самые карточки с твоего фото.</p>
+  </div>
+  <div class="subs">
+    <div class="sub">
+      <h4>У Даны</h4>
+      <ul>
+        <li><span>14 часов</span><b>21 000 ₽</b></li>
+        <li><span>10 часов</span><b>16 000 ₽</b></li>
+        <li><span>6 часов</span><b>10 200 ₽</b></li>
+      </ul>
+    </div>
+    <div class="sub">
+      <h4>У Альбины</h4>
+      <ul>
+        <li><span>14 часов</span><b>20 000 ₽</b></li>
+        <li><span>10 часов</span><b>14 000 ₽</b></li>
+        <li><span>6 часов</span><b>9 000 ₽</b></li>
+      </ul>
+    </div>
+    <div class="sub">
+      <h4>У Мадины</h4>
+      <ul>
+        <li><span>14 часов</span><b>19 000 ₽</b></li>
+        <li><span>10 часов</span><b>13 000 ₽</b></li>
+        <li><span>6 часов</span><b>8 400 ₽</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="works" style="background:#fafafa">
+  <div class="section-head">
+    <h2>До / После</h2>
+    <p>Реальные работы. Никаких фильтров.</p>
+  </div>
+  <div class="before-after">
+    <div class="ba"><span class="ba-label">ДО</span><img src="img/before-1.jpg" alt="Зона до электроэпиляции" loading="lazy" decoding="async"></div>
+    <div class="ba"><span class="ba-label">ПОСЛЕ</span><img src="img/after-1.jpg" alt="Зона после электроэпиляции" loading="lazy" decoding="async"></div>
+    <div class="ba"><span class="ba-label">ИГЛА В РАБОТЕ</span><img src="img/needle.jpg" alt="Игла Novella Epil в работе" loading="lazy" decoding="async"></div>
+    <div class="ba"><span class="ba-label">ПРОЦЕСС</span><img src="img/process.jpg" alt="Процесс электроэпиляции" loading="lazy" decoding="async"></div>
+  </div>
+</section>
+
+<footer class="footer" id="book">
+  <div>
+    <div class="brand">NOVELLA EPIL</div>
+    <div class="sub-line">Москва • Электроэпиляция навсегда</div>
+  </div>
+  <div class="contacts">
+    <a href="tel:+70000000000">+7 (000) 000-00-00</a>
+    <a href="https://t.me/novellaepil" target="_blank" rel="noopener">Telegram: @novellaepil</a>
+    <a href="https://wa.me/70000000000" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="#top" class="btn-silver" style="margin-top:8px;text-align:center">Записаться</a>
+  </div>
+  <div class="note">Демо в стиле «белый + серебро». Замените фото в папке <b>img/</b> и контакты — сайт готов к показу клиенту.</div>
+</footer>
+
+<script>
+/* ---------- Мобильное меню ---------- */
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menu');
+
+burger.addEventListener('click', () => {
+  const open = menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded', String(open));
+  burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+});
+
+menu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  });
+});
+
+/* ---------- Заглушка для отсутствующих фото ---------- */
+const PLACEHOLDER = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f6f8"/>
+      <stop offset="1" stop-color="#c9c9ce"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g)"/>
+  <text x="400" y="510" text-anchor="middle" font-family="Georgia, serif"
+        font-size="46" letter-spacing="10" fill="#ffffff">NOVELLA</text>
+</svg>`);
+
+document.querySelectorAll('img').forEach(img => {
+  img.addEventListener('error', function handler() {
+    img.removeEventListener('error', handler);
+    img.src = PLACEHOLDER;
+    img.alt = img.alt || 'Фото скоро появится';
+  });
+});
+</script>
+</body>
+</html>
